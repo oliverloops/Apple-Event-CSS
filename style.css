@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, Roboto,
+    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+a {
+  text-decoration: none;
+  color: rgb(18, 139, 250);
+  font-size: 1.35em;
+  padding: 25px 0 20px 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.apple-container {
+  display: flex;
+  justify-content: center;
+  padding: 8%;
+  z-index: 1;
+}
+
+.apple {
+  width: 260px;
+  height: 280px;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 7;
+  fill: transparent;
+  fill-opacity: 0.45;
+  filter: drop-shadow(-3px 2px 5px rgb(16, 198, 252)) blur(1px) brightness(100%)
+    contrast(3) saturate(4);
+  animation: illuminate 5s linear infinite;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(rgba(10, 10, 10, 0.125), rgba(10, 10, 10, 0.15)),
+    url(./static/apple_event_bg.png) no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%) rotateX(258deg);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(rgb(150, 202, 236), transparent, transparent);
+  border-radius: 50%;
+  animation: brigth 5s linear infinite;
+}
+
+.title {
+  color: #fff;
+  font-size: 3.65em;
+  font-weight: 500;
+  text-align: center;
+  z-index: 1;
+}
+
+.subtitle {
+  color: #fff;
+  font-size: 2em;
+  font-weight: 300;
+  padding: 7px 0 0 7px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Media Queries */
+@media (min-width: 280px) and (max-width: 767px) {
+  a {
+    font-size: 1.1em;
+    padding: 15px 0 0px 0;
+  }
+
+  .apple-container {
+    padding: 5% 0 20% 0;
+  }
+
+  .apple {
+    width: 200px;
+    height: 220px;
+  }
+
+  .title {
+    font-size: 2.15em;
+    font-weight: 400;
+  }
+
+  .subtitle {
+    font-size: 1.2em;
+    font-weight: 200;
+    padding: 5px 0 0 5px;
+  }
+
+  section::before {
+    transform: translate(-50%, -37%) rotateX(258deg);
+    width: 800px;
+    height: 800px;
+  }
+}
+
+/* Animations */
+/* Glow shadow animation */
+@keyframes brigth {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+    background: radial-gradient(
+      rgba(150, 202, 236, 0.8),
+      transparent,
+      transparent
+    );
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+    background: radial-gradient(
+      rgba(150, 202, 236, 0.8),
+      transparent,
+      transparent
+    );
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apple path animation */
+@keyframes illuminate {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+    filter: drop-shadow(1px 0 9px rgb(16, 198, 252)) blur(1px) brightness(100%)
+      contrast(3) saturate(4);
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+    filter: drop-shadow(1px 0 9px rgb(16, 198, 252)) blur(1px) brightness(100%)
+      contrast(3) saturate(4);
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
